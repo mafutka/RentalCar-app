@@ -7,18 +7,20 @@
 	--white: #fff;
 	--blue: #3470ff;
 	--dark-blue: #0b44cd;
+  --font-family: var(--font-manrope);
+  --font-family-secondary: var(--font-inter);
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: var(--font-family), sans-serif;
 }
 
 body {
   color: var(--main);
   background: var(--white);
+  font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -37,4 +39,8 @@ a {
 button {
     cursor: pointer;
     font-family: inherit;
+}
+
+li {
+  list-style: none;
 }

@@ -1,8 +1,10 @@
+"use client"
+
 import { usePathname } from "next/navigation"
 import css from "./Navigation.module.css";
 import Link from "next/link";
 
-export const Navigation = () => {
+export default function Navigation() {
     const path = usePathname();
 
     return (
@@ -12,13 +14,13 @@ export const Navigation = () => {
                     <Link href="/" className={css.link}>
                         Home
                     </Link>
-                ) : <span className={css.active}>Home</span>}
+                ) : (<span className={css.active}>Home</span>)}
                 </li>
-                <li>{path !== "/" ? (
+                <li>{path !== "/catalog" ? (
                     <Link href="/catalog" className={css.link}>
                         Catalog
                     </Link>
-                ) : <span className={css.active}>Catalog</span>}
+                ) : (<span className={css.active}>Catalog</span>)}
                 </li>
             </ul>
         </nav>
