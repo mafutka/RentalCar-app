@@ -1,5 +1,5 @@
-import axios from "axios";
+// import axios from "axios";
 
-const api = axios.create({
-  baseURL: "https://car-rental-api.goit.global",
-});
+// const api = axios.create({
+//   baseURL: "https://car-rental-api.goit.global",
+// });
