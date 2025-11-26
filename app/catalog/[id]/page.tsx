@@ -1,24 +1,16 @@
+import CarPageClient from "./CarPageClient";
 import { getCarById } from "@/lib/api/api";
+import { Car } from "@/types/types";
 
-interface CarPageProps {
-  params: {
-    id: string;
-  };
+interface PageProps {
+  params: { id: string };
 }
 
-export default async function CarPage({ params }: CarPageProps) {
-  const car = await getCarById(params.id);
+export default async function CarPage({ params }: PageProps) {
+ 
+  const car: Car | null = await getCarById(params.id);
 
-  if (!car) {
-    return <div>Car not found</div>;
-  }
+  if (!car) return <p>Car not found</p>;
 
-  return (
-    <div>
-      <img src={car.img} alt={car.brand} />
-      <h1>{car.brand} {car.model}</h1>
-      <p>Year: {car.year}</p>
-      <p>Price: {car.rentalPrice}</p>
-    </div>
-  );
+  return <CarPageClient car={car} />;
 }

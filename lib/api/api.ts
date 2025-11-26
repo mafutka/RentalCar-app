@@ -18,11 +18,12 @@ export const getCars = async (page = 1, limit = 12, filters = {}) => {
 
 export const getCarById = async (id: string) => {
   try {
+    console.log(id)
     const { data } = await clientApi.get<Car>(`/cars/${id}`);
     return data;
-  } catch (error: any) {
-    console.error("getCarById error:", error.response?.status, error.response?.data);
-    return null; 
+  } catch (err: any) {
+    console.error("getCarById error:", err.response?.status, err.response?.data);
+    return null;
   }
 };
 
