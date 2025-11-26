@@ -1,7 +1,6 @@
 .nav {
     display: flex;
-    width: 136px;
-    justify-content: center;
+   justify-content: center;
 }
 
 .navlist {

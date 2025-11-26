@@ -1,0 +1,8 @@
+.wrapper {
+    height: auto;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}

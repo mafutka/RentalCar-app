@@ -1,4 +1,57 @@
-.item {
+.card {
     display: flex;
     flex-direction: column;
+    width: 276px;
+    height: 424px;
 }
+
+.imgwrapper {
+    margin-bottom: 16px;
+}
+
+.image {
+    border-radius: 14px;
+    width: 100%;
+    height: 268px;
+    object-fit: cover;
+}
+
+.like {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: var(--main);
+}
+
+.span {
+    color: var(--blue);
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--gray);
+    gap: 6px;
+}
+
+
