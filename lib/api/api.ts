@@ -17,8 +17,13 @@ export const getCars = async (page = 1, limit = 12, filters = {}) => {
 };
 
 export const getCarById = async (id: string) => {
-  const { data } = await clientApi.get<Car>(`/cars/${id}`);
-  return data;
+  try {
+    const { data } = await clientApi.get<Car>(`/cars/${id}`);
+    return data;
+  } catch (error: any) {
+    console.error("getCarById error:", error.response?.status, error.response?.data);
+    return null; 
+  }
 };
 
 export const getBrands = async () => {

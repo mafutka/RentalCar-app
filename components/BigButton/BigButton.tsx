@@ -1,16 +1,20 @@
-import css from "./BigButton.module.css";
+"use client"
+import Link from "next/link";
 
-interface BigButtonProps {
+import css from "./BigButton.module.css";
+import { useRouter } from "next/router";
+
+export interface BigButtonProps {
     children: React.ReactNode;
     onClick?: () => void;
     type?: "button" | "submit";
-    href?: string;
+    href: string;
 }
 
-export function BigButton({ children, onClick, type = "button" }: BigButtonProps) {
+export function BigButton({ children, href }: BigButtonProps) {
     return (
-        <button className={css.button} onClick={onClick} type="button">
+        <Link href={href} className={css.button}>
             {children}
-        </button>
-    )
+        </Link>
+    );
 }

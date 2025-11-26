@@ -1,5 +1,7 @@
 .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-width: 1440px;
+  width: 100%;
+  padding: 0 120px; 
+  display: flex;
+  justify-content: center;
 }

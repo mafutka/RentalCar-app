@@ -53,7 +53,7 @@ return (
             <span>{car.mileage.toLocaleString()} km</span>
         </div>
 
-        <BigButton href={`/cars/${car.id}`}>Read more</BigButton>
+        <BigButton href={`/catalog/${car.id}`}>Read more</BigButton>
     </li>
   );
 }
